@@ -4,7 +4,8 @@ import java.util.ArrayList;
 
 /**
  * Данный класс содержит упражнения для ума по настроению
- * Анука проверим как работает гит 
+ * Анука проверим как работает гит
+ * повторно
  */
 public class Main {
 
@@ -41,6 +42,8 @@ public class Main {
         }
 
         System.out.println(imageToData(800, 600, 10, 10));
+
+        System.out.println(radiusCirculToTriangular(742, 742, 742));
     }
         //Метод, попытка перевода из двоичной системы в десятичную
         static int fromBinaryToDecimal (String item){
@@ -119,6 +122,12 @@ public class Main {
 
         double numInput= ((w/widthStep*2-1)*(h / heightStep*2-1));
         return numInput;
+        }
+        //Рассчитывает радиус окружности вписанной в треугольник
+        public static double radiusCirculToTriangular(double lenA, double lenB, double lenC){
+            double pp = (lenA + lenB + lenC) / 2;
+            double s = Math.sqrt(pp * (pp - lenA) * (pp - lenB) * (pp - lenC));
+            return s / pp;
         }
 }
 class Basket{
